@@ -1,0 +1,42 @@
+~/proyek/rust-tf-deploy-playground$ cargo install dinghy --verbose
+    Updating crates.io index
+  Installing dinghy v0.2.16
+   Compiling libc v0.2.76
+   Compiling cc v1.0.59
+   Compiling autocfg v1.0.1
+   Compiling pkg-config v0.3.18
+   Compiling cfg-if v0.1.10
+   Compiling serde v1.0.115
+   Compiling memchr v2.3.3
+   Compiling proc-macro2 v1.0.21
+     Running `rustc --crate-name build_script_build /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/libc-0.2.76/build.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type bin --emit=dep-info,link -C opt-level=3 -Cembed-bitcode=no --cfg 'feature="default"' --cfg 'feature="std"' --cfg 'feature="use_std"' -C metadata=a489829c78cdb5a7 -C extra-filename=-a489829c78cdb5a7 --out-dir /tmp/cargo-installewjzrv/release/build/libc-a489829c78cdb5a7 -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name cc --edition=2018 /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/cc-1.0.59/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=71445d63d5ba0d5d -C extra-filename=-71445d63d5ba0d5d --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name autocfg /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/autocfg-1.0.1/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=546e438e4f387148 -C extra-filename=-546e438e4f387148 --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name pkg_config /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/pkg-config-0.3.18/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=b786263bb4078ed2 -C extra-filename=-b786263bb4078ed2 --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name cfg_if --edition=2018 /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/cfg-if-0.1.10/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=f1d9cca014e2299a -C extra-filename=-f1d9cca014e2299a --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name build_script_build /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/serde-1.0.115/build.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type bin --emit=dep-info,link -C opt-level=3 -Cembed-bitcode=no --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=1098c603bc3c731e -C extra-filename=-1098c603bc3c731e --out-dir /tmp/cargo-installewjzrv/release/build/serde-1098c603bc3c731e -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name build_script_build /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/memchr-2.3.3/build.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type bin --emit=dep-info,link -C opt-level=3 -Cembed-bitcode=no --cfg 'feature="default"' --cfg 'feature="std"' -C metadata=426fdda062860035 -C extra-filename=-426fdda062860035 --out-dir /tmp/cargo-installewjzrv/release/build/memchr-426fdda062860035 -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+     Running `rustc --crate-name build_script_build --edition=2018 /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/proc-macro2-1.0.21/build.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type bin --emit=dep-info,link -C opt-level=3 -Cembed-bitcode=no --cfg 'feature="default"' --cfg 'feature="proc-macro"' -C metadata=8586b46b70012d68 -C extra-filename=-8586b46b70012d68 --out-dir /tmp/cargo-installewjzrv/release/build/proc-macro2-8586b46b70012d68 -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+   Compiling log v0.4.11
+     Running `rustc --crate-name build_script_build /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/log-0.4.11/build.rs --error-format=json --json=diagnostic-rendered-ansi --crate-type bin --emit=dep-info,link -C opt-level=3 -Cembed-bitcode=no --cfg 'feature="std"' -C metadata=bcffcbc96a1e0be5 -C extra-filename=-bcffcbc96a1e0be5 --out-dir /tmp/cargo-installewjzrv/release/build/log-bcffcbc96a1e0be5 -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+   Compiling lazy_static v1.4.0
+     Running `rustc --crate-name lazy_static /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/lazy_static-1.4.0/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=59e9f7d6f71f09f6 -C extra-filename=-59e9f7d6f71f09f6 --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --cap-lints allow`
+   Compiling tempdir v0.3.7
+     Running `rustc --crate-name tempdir /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/tempdir-0.3.7/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=c4a1430efbb95cfe -C extra-filename=-c4a1430efbb95cfe --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --extern rand=/tmp/cargo-installewjzrv/release/deps/librand-c3c7bbc6c7560582.rmeta --extern remove_dir_all=/tmp/cargo-installewjzrv/release/deps/libremove_dir_all-c8e82e92ab117162.rmeta --cap-lints allow`
+     Running `rustc --crate-name libz_sys /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/libz-sys-1.1.2/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no --cfg 'feature="default"' --cfg 'feature="libc"' --cfg 'feature="stock-zlib"' -C metadata=7045d187e4d6c0ef -C extra-filename=-7045d187e4d6c0ef --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --extern libc=/tmp/cargo-installewjzrv/release/deps/liblibc-8298d757dce3b30a.rmeta --cap-lints allow -l z`
+     Running `rustc --crate-name openssl_sys /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/openssl-sys-0.9.58/src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts --crate-type lib --emit=dep-info,metadata,link -C opt-level=3 -Cembed-bitcode=no -C metadata=be23df48efee2f7f -C extra-filename=-be23df48efee2f7f --out-dir /tmp/cargo-installewjzrv/release/deps -L dependency=/tmp/cargo-installewjzrv/release/deps --extern libc=/tmp/cargo-installewjzrv/release/deps/liblibc-8298d757dce3b30a.rmeta --cap-lints allow --cfg const_fn --cfg 'osslconf="OPENSSL_NO_SSL3_METHOD"' --cfg ossl101 --cfg ossl102 --cfg ossl102f --cfg ossl102h --cfg ossl110 --cfg ossl110f --cfg ossl110g --cfg ossl110h --cfg ossl111 --cfg ossl111b --cfg ossl111c -l ssl -l crypto`
+     Running `/tmp/cargo-installewjzrv/release/build/curl-sys-ecd50742240f51cb/build-script-build`
+     Running `/tmp/cargo-installewjzrv/release/build/libssh2-sys-b2fbbdba3bbe78ff/build-script-build`
+     Running `/tmp/cargo-installewjzrv/release/build/openssl-d8c3f26946d3dea7/build-script-build`
+error: failed to run custom build command for `openssl v0.9.24`
+
+Caused by:
+  process didn't exit successfully: `/tmp/cargo-installewjzrv/release/build/openssl-d8c3f26946d3dea7/build-script-build` (exit code: 101)
+  --- stderr
+  thread 'main' panicked at 'Unable to detect OpenSSL version', /home/budi/.cargo/registry/src/github.com-1ecc6299db9ec823/openssl-0.9.24/build.rs:16:14
+  note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+warning: build failed, waiting for other jobs to finish...
+error: failed to compile `dinghy v0.2.16`, intermediate artifacts can be found at `/tmp/cargo-installewjzrv`
+
+Caused by:
+  build failed

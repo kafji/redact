@@ -1,0 +1,17 @@
+[package]
+name = "redact"
+version = "0.1.0"
+authors = ["Kafji <k@kafji.net>"]
+license = "MIT OR Apache-2.0"
+edition = "2018"
+
+[dependencies]
+aho-corasick = "0.7"
+anyhow = "1.0"
+clap = "2.33"
+serde_json = "1.0"
+
+[dev-dependencies]
+assert_cmd = "1.0"
+dotenv_codegen = "0.15"
+tempfile = "3.1"
