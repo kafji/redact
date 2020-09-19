@@ -1,6 +1,5 @@
 use assert_cmd::Command;
 use std::{fs, io::Write};
-use tempfile;
 
 #[test]
 fn redact_text() {
@@ -18,7 +17,7 @@ fn redact_text() {
 #[test]
 fn redact_file() {
     let mut input_file = tempfile::NamedTempFile::new().unwrap();
-    input_file.write("Hello world!".as_bytes()).unwrap();
+    input_file.write_all(b"Hello world!").unwrap();
 
     let output = Command::cargo_bin("redact")
         .unwrap()
