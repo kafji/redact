@@ -1,13 +1,6 @@
 name: Build
 
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
-
-env:
-  CARGO_TERM_COLOR: always
+on: push
 
 jobs:
   build:
@@ -15,7 +8,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          # https://doc.rust-lang.org/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+          key: cargo-${{ github.ref }}-${{ hashFiles('./Cargo.lock') }}
+          restore-keys: |
+            cargo-${{ github.ref }}-
+            cargo-
+
       - name: Build
         run: cargo build --verbose
-      - name: Run tests
+
+      - name: Tests
         run: cargo test --verbose
