@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use std::env;
 
-static KEYWORDS_ENV_VAR_KEY: &'static str = "REDACT_KEYWORDS";
+const KEYWORDS_ENV_VAR_KEY: &str = "REDACT_KEYWORDS";
 
 #[derive(Eq, PartialEq, Debug)]
 pub struct Config {

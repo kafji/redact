@@ -1,7 +1,7 @@
 use anyhow::{Context, Result};
 use std::io::Write;
 
-static REDACT_TOKEN: &'static str = "█████";
+const REDACT_TOKEN: &str = "█████";
 
 pub fn redact<T>(keywords: &[T], target: &str) -> Result<String>
 where
