@@ -1,6 +1,6 @@
 [package]
 name = "redact"
-version = "0.1.1"
+version = "0.2.0"
 authors = ["Kafji <k@kafji.net>"]
 license = "MIT OR Apache-2.0"
 edition = "2018"
@@ -8,6 +8,7 @@ edition = "2018"
 [dependencies]
 aho-corasick = "0.7"
 anyhow = "1.0"
+atty = "0.2"
 clap = "2.33"
 serde_json = "1.0"
 

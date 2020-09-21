@@ -31,6 +31,19 @@ fn redact_file() {
 }
 
 #[test]
+fn redact_text_from_stdin() {
+    let output = Command::cargo_bin("redact")
+        .unwrap()
+        .write_stdin("Hello world!")
+        .env("REDACT_KEYWORDS", r#"["hello", "world"]"#)
+        .unwrap();
+
+    assert!(output.status.success());
+    let stdout = String::from_utf8(output.stdout).unwrap();
+    assert_eq!("█████ █████!\n", stdout);
+}
+
+#[test]
 fn redact_rust_compilation_error() {
     let output = Command::cargo_bin("redact")
         .unwrap()
