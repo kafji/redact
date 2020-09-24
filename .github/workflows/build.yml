@@ -22,8 +22,8 @@ jobs:
           restore-keys: |
             cargo-
 
-      - name: Build
-        run: cargo build --verbose
-
       - name: Test
         run: cargo test --verbose
+
+      - name: Build
+        run: cargo build --release --verbose
