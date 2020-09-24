@@ -18,9 +18,8 @@ jobs:
             ~/.cargo/registry/index/
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
-          key: cargo-${{ github.ref }}-${{ hashFiles('./Cargo.lock') }}
+          key: cargo-${{ hashFiles('./Cargo.lock') }}
           restore-keys: |
-            cargo-${{ github.ref }}-
             cargo-
 
       - name: Build
