@@ -4,7 +4,7 @@
 
 CLI application to redact sensitive keywords from a text/document.
 
-### Usage
+## Usage
 
 ```
 $ REDACT_KEYWORDS='["hello"]' redact 'Hello world!'
@@ -19,7 +19,7 @@ Install using `cargo install` command and set env var `REDACT_KEYWORDS` to a lis
 
 <br>
 
-### License
+## License & Contribution
 
 Licensed under either of
 
@@ -29,8 +29,6 @@ Licensed under either of
    ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
 
 at your option.
-
-### Contribution
 
 Unless you explicitly state otherwise, any contribution intentionally submitted
 for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
