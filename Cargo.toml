@@ -2,8 +2,9 @@
 name = "redact"
 version = "0.2.0"
 authors = ["Kafji <k@kafji.net>"]
-license = "MIT OR Apache-2.0"
 edition = "2018"
+license = "MIT OR Apache-2.0"
+publish = false
 
 [dependencies]
 aho-corasick = "0.7"
