@@ -18,8 +18,9 @@ jobs:
             ~/.cargo/registry/index/
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
-          key: cargo-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}
+          key: cargo-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}-${{ github.sha }}
           restore-keys: |
+            cargo-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}-
             cargo-
 
       - name: Test
