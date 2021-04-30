@@ -1,6 +1,7 @@
 # Redact
 
 [![Build](https://github.com/kafji/redact/workflows/Build/badge.svg)](https://github.com/kafji/redact/actions?query=workflow%3ABuild)
+[![Source](https://img.shields.io/badge/Source-666)](https://github.com/kafji/redact)
 
 CLI application to redact sensitive keywords from a text/document.
 
@@ -13,9 +14,11 @@ $ REDACT_KEYWORDS='["hello"]' redact 'Hello world!'
 
 which equivalent to `echo 'Hello world!' | sed 's/hello/█████/gi'`
 
-### Installation
+## Installation
 
-Install using `cargo install` command and set env var `REDACT_KEYWORDS` to a list of keywords to be redacted in JSON array format e.g. `export REDACT_KEYWORDS='["secret", "private"]'`
+```bash
+cargo install --git https://github.com/kafji/redact
+```
 
 <br>
 
