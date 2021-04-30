@@ -20,8 +20,6 @@ which equivalent to `echo 'Hello world!' | sed 's/hello/█████/gi'`
 cargo install --git https://github.com/kafji/redact
 ```
 
-<br>
-
 ## License & Contribution
 
 Licensed under either of
