@@ -6,10 +6,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    timeout-minutes: 20
+
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache
+      - id: cache-cargo
         uses: actions/cache@v2
         with:
           # https://doc.rust-lang.org/cargo/guide/cargo-home.html#caching-the-cargo-home-in-ci
@@ -18,10 +20,10 @@ jobs:
             ~/.cargo/registry/index/
             ~/.cargo/registry/cache/
             ~/.cargo/git/db/
-          key: cargo-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}-${{ github.sha }}
+          key: cargo-${{ runner.os }}-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}-${{ github.sha }}
           restore-keys: |
-            cargo-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}-
-            cargo-
+            cargo-${{ runner.os }}-${{ hashFiles('./Cargo.toml', './Cargo.lock') }}-
+            cargo-${{ runner.os }}-
 
       - name: Test
         run: cargo test --verbose
